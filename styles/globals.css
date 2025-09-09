@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+.container { max-width: 840px; margin: 0 auto; padding: 16px; }
+.card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 16px; margin: 12px 0; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.row { display: flex; gap: 8px; align-items: center; }
+input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; }
+label { font-size: 14px; color: #333; display:block; margin-bottom: 4px; }
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+.small { font-size: 12px; color: #666; }
+.actions { display: flex; gap: 8px; }
+.icon { font-size: 24px; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; background:#f3f4f6; font-size:12px; }
+footer { margin: 24px 0; color:#666; font-size: 12px; text-align: center; }
+@media (prefers-color-scheme: dark) {
+  body { background:#0b0b0b; color:#ddd; }
+  .card { background:#111; border-color:#222; }
+  input, select, textarea { background:#0d0d0d; color:#ddd; border-color:#222; }
+}
+/* --- UI Tweaks --- */
+button, .btn {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  padding: 10px 14px;
+  border-radius: 9999px; /* stark abgerundet */
+}
+button:hover, .btn:hover { background: #efefef; }
+
+.card.card-compact {
+  padding: 12px;
+}
+.card-compact input, .card-compact select {
+  padding: 8px 10px;
+}
+label.small-label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 2px;
+}
+/* Status-Hintergründe */
+.bg-active { background: #e6fffb; /* teal-50-ish */ }
+.bg-paused { background: #ffe6ef; /* rosa/rot-50-ish */ }
+
+/* kleinere Buttons */
+.btn { cursor: pointer; border: 1px solid #ddd; background: #f7f7f7; padding: 8px 12px; border-radius: 9999px; font-size: 14px; }
+.btn:hover { background: #efefef; }
+.btn-xs { padding: 4px 8px; font-size: 12px; border-radius: 9999px; }
+
+/* kleine Labels / kompakter Card bereits vorhanden? Falls nicht: */
+.card.card-compact { padding: 12px; }
+label.small-label { font-size: 12px; color: #777; margin-bottom: 2px; }
+/* Font (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+html, body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+
+/* Status-Hintergründe */
+.bg-active { background: #e6fffb; }   /* teal */
+.bg-paused { background: #ffe6ef; }   /* rot/rosa */
+
+/* Buttons */
+.btn { cursor: pointer; border: 1px solid #ddd; background: #f7f7f7; padding: 8px 12px; border-radius: 9999px; font-size: 14px; }
+.btn:hover { background: #efefef; }
+.btn-xs { padding: 4px 8px; font-size: 12px; border-radius: 9999px; }
+
+/* Kompakter Card + Labels */
+.card.card-compact { padding: 12px; }
+label.small-label { font-size: 12px; color: #777; margin-bottom: 2px; }
+
+/* Kosten-„Badge“ als breite Pill */
+.cost-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  min-width: 160px;          /* breiter, einzeilig */
+  border-radius: 9999px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  white-space: nowrap;
+  font-weight: 600;
+}
